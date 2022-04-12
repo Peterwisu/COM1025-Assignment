@@ -1,0 +1,370 @@
+<html>
+<head>
+  
+
+    <meta charset="UTF-8">
+    <title>Register Form </title>
+    <style> 
+      #table    {
+           border-radius: 25px;
+           background: #ffffff;
+           border: 2px solid #f1e428;
+           padding: 20px; 
+           width: 200px;
+           height: 150px;  
+           }
+      .center {
+             margin-left: auto;
+             margin-right: auto;
+          }    
+          h1 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: lighter;
+            font-size: 30px;
+            color:seashell;
+            text-align: center;
+            height: 50px;
+            width: 100%;
+            background-color: #2b4170;
+            border-radius: 25px;
+            border: 1px solid #2b4170;
+          }
+          td {
+                font-family: 'Courier New', monospace;
+            }
+
+</style>
+<style></style>
+</head>
+
+<body>
+
+<h1 > University of Surrey Accommodation Register </h1>
+<h6>Created by Wish Suharitdamrong COM1025 Coursework</h6>
+<form action="http://localhost:8080/insertvalue.php" method="POST">
+  <table border=0 style="width:80%" id="table" class="center">
+    <tr><td colspan="2"><h2 style="text-align:center"></h2style>Register Form</h2>   </td>
+      
+    </tr>
+    <tr>
+      <td colspan="2">
+        <h4>Fill up a your details to book a University Accommodations</h4>
+        <p style="color: red;">**required**</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        First Name :
+      </td>
+      <td>
+        <input type ="text" placeholder="First Name" name="fname" >
+      </td>
+    </tr>
+
+    <tr>
+      <td >
+        Last Name :
+      </td>
+      <td>
+        <input type ="text" placeholder="Last Name" name="lname">
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Gender :
+      </td>
+      <td>
+        <input type="radio" name="gender" value="Male">Male
+        <input type="radio" name="gender" value="Female">Female
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Email :
+      </td>
+      <td>
+        <input type="email" placeholder="Email" name="email">
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Phone :
+      </td>
+      <td>
+        <input type="number" placeholder="Phone" name="phone">
+      </td>
+    </tr>
+
+    
+      <tr>
+        <td>
+          <p>ID:</p> <p style="color: red;" > **Your User ID will be stored as Guest ID**</p>
+        </td>
+        <td>
+          <input type="text" placeholder="Guest_ID" name="guestID">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          DOB:
+        </td>
+        <td>
+          <input type="date" placeholder="DOB" name="DOB">
+        </td>
+      </tr>
+
+      
+        <tr>
+        <td>
+          Guest Type:
+        </td>
+        <td>
+          <input type="radio" name="Guest_type" value="Visitor">Visitor
+          <input type="radio" name="Guest_type" value="Academic">Academic
+        </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <h4>Only required for Visitor :</h4>
+          </td>
+        </tr>
+        <tr>
+            <td>
+            Student ID of a Student Guest intend to visit:
+            </td>
+          <td>
+            <input type="number" placeholder="Student ID" name="Stu_IDfromVistor">
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+          <h4 >Only required for Academic: </h4>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Academic Department:
+          </td>
+          <td>
+            <input type="text" placeholder="Department" name="Acad_Department">
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Academic Type:
+          </td>
+          <td>
+            <select name="Acad_Type">
+              <option value="Staff" >Staff</option>
+              <option value="Student">Student</option>
+            </select>
+          </td>
+  
+
+      </tr>
+      <tr>
+        <td colspan="2">
+          <h4> Only required for Academic that are Student:</h4>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+           Student ID :
+        </td>
+        <td>
+          <input type="number" placeholder="Student ID" name="Stu_ID">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Student course:
+        </td>
+        <td>
+          <input type="text" placeholder="Name of a Course" name="Stu_Course">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Student Type
+        </td>
+        <td>
+          <select name="Stu_Type">
+            <option value="UG">Undergraduate</option>
+            <option value="PG">Postgraduate</option>
+        </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2">
+         <h4>Only required for Academic that are Staff:</h4> 
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Staff ID:
+        </td>
+        <td>
+          <input type="number" placeholder="Staff ID" name="Staff_ID">
+        </td>
+      </tr>
+
+        <tr>
+          <td>
+            Staff Title:
+          </td>
+          <td>
+            <select name="Staff_Title">
+              <option value="Prof">Prof</option>
+              <option value="Dr">Dr</option>
+              <option value="Mr">Mr</option>
+              <option value="Mrs">Mrs</option>
+              
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Staff Position</td>
+
+          <td>
+            <select name="Staff_Position">
+              <option value="Teaching Fellows">Teaching Fellows</option>
+              <option value="Senior Lecturer">Senior Lecturer</option>
+              <option value="Lecturer">Lecturer</option>
+              <option value="Senior Teaching Fellow">Senior Teaching Fellow</option>
+              <option value="Professor">Professor</option>
+              <option value="Reader">Reader</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Staff Salary:
+          </td>
+          <td>
+            <input type="number" placeholder="Salary" name="Staff_Salary">
+          </td>
+        </tr>
+
+
+
+
+
+        <tr>
+          <td colspan="2">
+            <h2>
+              Accommodation :
+            </h2>
+            <a  style="color: red;" href="http://localhost:8080/accommodationdetails.php">Click Here to see more details about University Accommodation</a>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Please choose Accommodations
+          </td>
+          <td>
+              <Select name="Acc_ID">
+                <option value="ACC00001">Battersea Court</option>
+                <option value="ACC00002">Cathedral Court</option>
+                <option value="ACC00003">Guildford Court</option>
+                <option value="ACC00004">International House</option>
+                <option value="ACC00005">Millennium House</option>
+                <option value="ACC00006">Stag Hill Court</option>
+                <option value="ACC00007">Surrey Court</option>
+                <option value="ACC00008">Twyford Court</option>
+                <option value="ACC00009">Manor Park</option>
+                <option value="ACC00010">Bellerby Court</option>
+              </Select>
+          </td>
+        </tr>
+        <tr>
+          <td> Start Date:</td>
+          <td> <input type="date"  name="Start"></td>
+        </tr>
+        <tr>
+          <td>
+            End Date:
+          </td>
+          <td>
+            <input type="date" name="End">
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <h2>
+              Payment:
+            </h2>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Payment Type
+          </td>
+          <td>
+            <select name="Payment_Type">
+              <option value="UK-Bank-Transfer">UK Bank Transfer</option>
+              <option value="E-PAYMENT">E Payment</option>
+              <option value="FaceToFace">Face to Face</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <h4>For UK BanK Transfer:</h4>
+          </td>
+          
+        </tr>
+        <tr>
+          <td>Transfer Number:</td>
+          <td><input type="Text" placeholder="Transfer Number" name="Payment_TransferNo">
+          </td>
+        </tr>
+        <tr><td colspan="2">
+          <h4>For E-Payment:</h4>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Credit Card:
+        </td>
+        <td>
+          <input type="number" placeholder="Card Number" name="Payment_CreditCard">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <h4>For Face To Face Payment at Surrey Hive:</h4>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Date of Payment:
+        </td>
+        <td>
+          <input type="date" name="Payment_Date">
+        </td>
+
+      </tr>
+      <tr>
+      <td colspan="2" style="text-align:center">
+        <br><input type="submit" value="Book an Accommodation" >
+      </td>
+    </tr>
+  </table>
+</form>
+
+
+</body>
+
+</html>
